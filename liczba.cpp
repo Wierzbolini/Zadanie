@@ -10,10 +10,17 @@ bool czy_bezkwadratowa(int liczba){
 
     return true;
 }
+void czy_ujemna(int liczba){
+    if(liczba <= 0){
+        cout << "Podana liczba nie jest naturalna, koncze dzialanie...";
+        abort();
+    }
+}
 
 int main(){
     int n;
     cin >> n;
+    czy_ujemna(n);
     cout << n << endl;
     if(czy_bezkwadratowa(n)) cout << "Bezkwadratowa" << endl;
     else cout << "Nie jest bezkwadratowa" << endl;
